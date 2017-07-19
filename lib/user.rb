@@ -1,8 +1,9 @@
 require './lib/joke'
+require 'pry'
 
 class User
   attr_reader :name,
-              :joke
+              :jokes
 
   def initialize(name)
     @name = name
@@ -11,7 +12,13 @@ class User
 
 
   def joke
-    Joke.new
+  learn(Joke.new)
   end
+
+  def learn(joke)
+  @jokes << joke
+  end
+
+
 
 end
