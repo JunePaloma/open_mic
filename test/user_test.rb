@@ -21,4 +21,5 @@ class UserTest < Minitest::Test
 
     assert_equal "Ali", ali.name
   end
+  
 end

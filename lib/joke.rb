@@ -5,9 +5,22 @@ require './lib/user'
 require "pry"
 
 class Joke
+attr_reader :jokes
 
-  def test_theres_a_joke
-    assert_instance_of Joke, Joke.new
+  def initialize
+    @jokes = {id: 1, question: "Why did the strawberry cross the road?", answer: "Because his mother was in a jam."}
+  end
+
+  def id
+    @jokes[:id]
+  end
+
+  def question
+    @jokes[:question]
+  end
+
+  def answer
+    @jokes[:answer]
   end
 
 end
