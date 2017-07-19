@@ -21,5 +21,9 @@ class UserTest < Minitest::Test
 
     assert_equal "Ali", ali.name
   end
-  
+
+   def test_theres_a_joke
+     ali = User.new("Ali")
+     assert_instance_of Joke, ali.joke
+   end
 end
