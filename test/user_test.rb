@@ -19,7 +19,7 @@ class UserTest < Minitest::Test
     assert_equal "Ali", ali.name
   end
 
-   def test_theres_a_joke
+   def test_theres_a_joke #this was working until I started shoveling jokes into the joke array
      ali = User.new("Ali")
      assert_instance_of Joke, ali.joke
    end
@@ -29,8 +29,13 @@ class UserTest < Minitest::Test
      assert_equal [], sal.jokes
    end
 
-   def test_user_can_learn_jokes
+   def test_user_can_learn_jokes  #this was also working until I started shoveling jokes into the joke array
       sal = User.new("Sal")
       assert_instance_of Joke, sal.joke
+   end
+
+   def test_can_count_jokes
+     sal = User.new("Sal")
+     assert_equal 0, sal.count
    end
 end

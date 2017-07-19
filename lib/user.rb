@@ -20,5 +20,13 @@ class User
   end
 
 
+  def tell(joke)
+  joke = Joke.new
+  end
+
+  def count
+    @jokes.length
+  end
+
 
 end
